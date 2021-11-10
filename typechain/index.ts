@@ -3,8 +3,8 @@
 /* eslint-disable */
 export type { ERC20 } from "./ERC20";
 export type { IERC20 } from "./IERC20";
-export type { GuildToken } from "./GuildToken";
+export type { BlockchainSpaceToken } from "./BlockchainSpaceToken";
 
 export { ERC20__factory } from "./factories/ERC20__factory";
 export { IERC20__factory } from "./factories/IERC20__factory";
-export { GuildToken__factory } from "./factories/GuildToken__factory";
+export { BlockchainSpaceToken__factory } from "./factories/BlockchainSpaceToken__factory";

@@ -12,7 +12,7 @@ const doDeployGuild = async (
   // calculate initial supply
   //   const initSupply = ethers.utils.parseEther(initialSupply.toString())
 
-  console.log("------------- DEPLOY GuildToken.sol -------------");
+  console.log("------------- DEPLOY BlockchainSpaceToken.sol -------------");
 
   // Signer details
   console.log("Deployer Address:", deployer.address);
@@ -24,10 +24,10 @@ const doDeployGuild = async (
   /**
    * Deploy HeloToken contract
    */
-  const HaloToken = await ethers.getContractFactory("GuildToken");
+  const HaloToken = await ethers.getContractFactory("BlockchainSpaceToken");
   const haloTokenContract = await HaloToken.deploy(
-    "Alpha Guild Token",
-    "HUB",
+    "BlockchainSpace",
+    "GUILD",
     "1000000000000000000000000000"
   );
   await haloTokenContract.deployed();
@@ -45,14 +45,16 @@ const doDeployGuild = async (
     await hre.run("verify:verify", {
       address: haloTokenContract.address,
       constructorArguments: [
-        "Alpha Guild Token",
-        "HUB",
+        "BlockchainSpace",
+        "GUILD",
         "1000000000000000000000000000",
       ],
     });
   }
 
-  console.log("------------- DONE DEPLOYING GuildToken.sol -------------");
+  console.log(
+    "------------- DONE DEPLOYING BlockchainSpaceToken.sol -------------"
+  );
 
   return haloTokenContract.address;
 };
