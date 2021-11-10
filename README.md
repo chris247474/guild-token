@@ -18,8 +18,11 @@ Refer to our [env example](./.env.example) file in project root.
 ### Running Tests
 
 ```bash
-yarn install
-yarn run test
+- nvm use
+- yarn run node
+- Open new terminal
+- nvm use
+- yarn run test
 ```
 
 ### Verifying smart contracts in bscscan and etherscan
